@@ -4,7 +4,13 @@
   "description": "Associated repo for http://funkyjavascript.com/destructuring-the-spread-operator-and-other-neat-stuff",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel index.es2017.js -o index.js --plugins transform-object-rest-spread",
+    "run": "npm run build; node index.js"
+  },
+  "babel": {
+    "plugins": [
+      "babel-plugin-transform-object-rest-spread"
+    ]
   },
   "repository": {
     "type": "git",
@@ -15,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/NerdcoreSteve/destructuring-the-spread-operator-and-other-neat-stuff/issues"
   },
-  "homepage": "https://github.com/NerdcoreSteve/destructuring-the-spread-operator-and-other-neat-stuff#readme"
+  "homepage": "https://github.com/NerdcoreSteve/destructuring-the-spread-operator-and-other-neat-stuff#readme",
+  "devDependencies": {
+    "babel-plugin-transform-object-rest-spread": "^6.20.2"
+  }
 }
