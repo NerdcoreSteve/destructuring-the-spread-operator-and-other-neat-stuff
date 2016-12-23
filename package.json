@@ -1,0 +1,19 @@
+{
+  "name": "destructuring-the-spread-operator-and-other-neat-stuff",
+  "version": "1.0.0",
+  "description": "Associated repo for http://funkyjavascript.com/destructuring-the-spread-operator-and-other-neat-stuff",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NerdcoreSteve/destructuring-the-spread-operator-and-other-neat-stuff.git"
+  },
+  "author": "Steve Smith",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/NerdcoreSteve/destructuring-the-spread-operator-and-other-neat-stuff/issues"
+  },
+  "homepage": "https://github.com/NerdcoreSteve/destructuring-the-spread-operator-and-other-neat-stuff#readme"
+}
