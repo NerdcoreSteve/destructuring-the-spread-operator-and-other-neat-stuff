@@ -78,9 +78,48 @@ prints
   superHeroFriends: [ 'Johnny Storm', 'Black Cat', 'Daredevil' ] }
 */
 
-const adLib =
-    ({subject = 'I', pastTenseVerb = 'drank', pronoun = 'their', object = 'milk shake'} = {}) =>
-        `${subject} ${pastTenseVerb} ${pronoun} ${object}!`
+const madLib =
+    ({subject = 'I', pastTenseVerb = 'drank', owner = 'their', object = 'milk shake'} = {}) =>
+        `${subject} ${pastTenseVerb} ${owner} ${object}!`
 
-console.log(adLib())
+console.log(madLib())
 //prints I drank their milk shake!
+
+console.log(madLib({}))
+//prints I drank their milk shake!
+
+console.log(madLib({subject: 'you', object: 'apple cider'}))
+//prints you drank their apple cider!
+
+console.log(madLib({
+    subject: 'Batman',
+    pastTenseVerb: 'massaged',
+    owner: 'superman\'s',
+    object: 'shoulders'}))
+//prints Batman massaged superman's shoulders!
+
+const people = [
+    {},
+    {},
+    {},
+    {
+        name: 'Bob',
+        address: {
+            number: 1234,
+            streetName: 'First st',
+            city: 'Nowheresville',
+            state: 'Banana'
+        }
+    },
+    {},
+    {},
+    {},
+    {}
+]
+
+const someFunc =
+    ([first, second, third, {name, address: {streetName, number} }, ...remainder]) =>
+        `The 4th person in the list is ${name}. They live on ${number} ${streetName}`
+
+console.log(someFunc(people))
+//prints The 4th person in the list is Bob. They live on 1234 First st
