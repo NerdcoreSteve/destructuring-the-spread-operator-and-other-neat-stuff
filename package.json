@@ -4,8 +4,8 @@
   "description": "Associated repo for http://funkyjavascript.com/destructuring-the-spread-operator-and-other-neat-stuff",
   "main": "index.js",
   "scripts": {
-    "build": "babel index.es2017.js -o index.js --plugins transform-object-rest-spread",
-    "run": "npm run build; node index.js"
+    "build": "babel index.es2017.js -o index.js --plugins=transform-object-rest-spread",
+    "start": "rm index.js; npm run build; node ."
   },
   "babel": {
     "plugins": [

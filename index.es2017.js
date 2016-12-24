@@ -65,4 +65,22 @@ console.log(...tail(spiderPowers))
 console.log(head(spiderPowers))
 //prints wall crawling
 
-console.log({...spiderman})
+console.log({...spiderman, superHeroFriends: ['Johnny Storm', 'Black Cat', 'Daredevil']})
+/*
+prints
+{ name: 'Spider-Man',
+  alterEgo: 'Peter Parker',
+  powers:
+   [ 'wall crawling',
+     'spider sense',
+     'spider agility',
+     'enhanced strength' ],
+  superHeroFriends: [ 'Johnny Storm', 'Black Cat', 'Daredevil' ] }
+*/
+
+const adLib =
+    ({subject = 'I', pastTenseVerb = 'drank', pronoun = 'their', object = 'milk shake'} = {}) =>
+        `${subject} ${pastTenseVerb} ${pronoun} ${object}!`
+
+console.log(adLib())
+//prints I drank their milk shake!
